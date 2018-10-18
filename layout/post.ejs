@@ -1,0 +1,30 @@
+<div class="posts">
+    <article class="post-whole">
+        <div class="post-title">
+            <h2 class="title"><%= page.title %></h2>
+        </div>
+        <div class="post-meta">
+            <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
+            <% if (page.categories.length){ %>
+                <span class="post-category">
+                    <% page.categories.forEach(function (category) { %>
+                        <a class="category" href="<%= url_for(category.path) %>"><%= category.name %></a>
+                    <% }) %>
+                </span>
+            <% } %>
+            <span class="post-visit"> <%- __('Post.visit')%>：<span id="busuanzi_value_page_pv"></span></span>
+        </div>
+        <div class="post-content">
+            <%- page.content %>
+        </div>
+        <% if (page.tags.length) {%>
+        <div class="post-tag">
+            <% page.tags.forEach(function (tag) { %>
+            <a class="tag" href="<%= url_for(tag.path) %>" title="<%= tag.name %>"><%= tag.name %></a>
+            <% })%>
+        </div>
+        <% } %>
+    </article>
+</div>
+<%- partial('_partial/paginator') %>
+<div id="comment-container"></div>

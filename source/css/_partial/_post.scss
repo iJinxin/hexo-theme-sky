@@ -1,0 +1,54 @@
+// post common style
+.post-abstract, .post-whole {
+  padding-top: $padding-large;
+  .post-title h2 {
+    font-weight: $global-font-weight;
+    margin: 0;
+  }
+  .post-title-link {
+    color: $black;
+  }
+  .post-time, .post-category, .post-visit {
+    color: $dark-gray;
+    font-size: $post-time-font;
+  }
+  .post-category, .post-visit {
+    &::before {
+      content: '·';
+    }
+  }
+  .post-content {
+    font-size: $global-font-size;
+  }
+}
+
+// ==== post abstract ====
+.post-abstract {
+  padding-bottom: $padding-small;
+  border-bottom: $post-border
+}
+
+// ==== post whole ====
+.post-whole {
+  .post-content {
+    border-bottom: 1px solid $gray;
+  }
+  .post-tag {
+    padding: 15px 0;
+    .tag {
+      margin-right: 6px;
+      color: $theme-color-base;
+      &::before {
+        content: '#';
+      }
+      &:hover {
+        color: $theme-color-hover;
+      }
+    }
+  }
+}
+
+// ==== Code, Toc ==== //
+@import "post/code";
+@import "post/toc";
+

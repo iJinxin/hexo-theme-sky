@@ -1,0 +1,41 @@
+.paginator {
+  font-family: $global-Lato-font-family;
+  font-size: 20px;
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    height: 0;
+    zoom: 1;
+  }
+  margin: 1em 0;
+  .prev {
+    float: left;
+    transition: .3s ease-out;
+    &:hover {
+      color: $theme-color-hover;
+      transform: translateX(-4px);
+    }
+  }
+  .next {
+    float: right;
+    transition: .3s ease-out;
+
+    &:hover {
+      color: $theme-color-hover;
+      transform: translateX(4px);
+    }
+  }
+  .nav-mobile {
+    display: none;
+  }
+  @include max-screen() {
+    .nav-mobile {
+      display: inline;
+    }
+    .nav-default {
+      display: none;
+    }
+  }
+}

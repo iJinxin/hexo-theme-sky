@@ -1,0 +1,14 @@
+.post-copyright {
+  padding: $copyright-padding;
+  font-size: $copyright-font;
+  border-bottom: 1px solid $gray;
+  .post-copyright-item {
+    margin: $copyright-item-margin;
+    a {
+      color: $theme-color-base;
+      &:hover {
+        color: $theme-color-hover;
+      }
+    }
+  }
+}

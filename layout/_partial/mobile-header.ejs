@@ -1,0 +1,29 @@
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="<%= url_for(config.home_dir || '/')%>" class="mobile-nav-title-link">iJinxin</a>
+        </div>
+
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <a href="<%= url_for(config.home_dir || '/')%>" class="mobile-nav-link"><%- __('Menu.Home') %></a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="<%= url_for(config.archive_dir || '/')%>" class="mobile-nav-link"><%- __('Menu.Archives') %></a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="<%= url_for(config.tag_dir || '/')%>" class="mobile-nav-link"><%- __('Menu.Tags') %></a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="<%= config.root %><%- 'about/' %>" class="mobile-nav-link"><%- __('Menu.About') %></a>
+            </li>
+        </ul>
+    </nav>
+</header>

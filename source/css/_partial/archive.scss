@@ -1,0 +1,27 @@
+// ==== style for archive, archive tags, archive categories ====
+.archive {
+  margin: 2em 0;
+  .archive-timeline {
+    font-family: $global-font-family;
+    .archive-year {
+      font-weight: $global-font-weight;
+      font-size: $archive-timeline-font-size;
+      margin: $archive-timeline-margin;
+    }
+  }
+  .archive-post {
+    padding: $archive-post-padding;
+    border-left: 1px solid $gray;
+    .archive-post-time {
+      margin-right: $archive-post-time-margin;
+    }
+    &:hover {
+      border-left: 3px solid $theme-color-hover;
+      transform: translateX(3px);
+      transition: 0.3s ease-out;
+      .archive-post-link {
+        color: $theme-color-hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="paginator">
+    <% if (!is_post()) { %>
+        <% if (page.prev) { %>
+        <a class="prev" href="<%- url_for(page.prev_link) %>">
+            <i class="iconfont icon-prev"></i>
+            <%- __('Paginator.Prev') %>
+        </a>
+        <% } %>
+        <% if (page.next) { %>
+        <a class="next" href="<%- url_for(page.next_link) %>">
+            <%- __('Paginator.Next') %>
+            <i class="iconfont icon-next"></i>
+        </a>
+        <% } %>
+    <% }else { %>
+        <% if (page.prev) {%>
+            <a class="prev" href="<%- url_for(page.prev.path)%>">
+                <i class="iconfont icon-prev"></i>
+                <span class="nav-default"><%= page.prev.title %></span>
+                <span class="nav-mobile"><%- __('Paginator.prev_post') %></span>
+            </a>
+        <% } %>
+        <% if (page.next) {%>
+            <a class="next" href="<%- url_for(page.next.path)%>">
+                <span class="nav-default"><%= page.next.title %></span>
+                <span class="nav-mobile"><%- __('Paginator.next_post')%></span>
+                <i class="iconfont icon-next"></i>
+            </a>
+        <% } %>
+    <% } %>
+</div>

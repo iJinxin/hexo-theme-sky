@@ -1,0 +1,33 @@
+.tags {
+  margin: 2em 0;
+}
+
+.tags-list {
+  .tags-list-item {
+    margin-right: $tags-list-item-margin;
+    &::before {
+      content: '#';
+    }
+  }
+}
+
+.tags-archives {
+  margin-top: $tags-archives-top;
+  .tag-text {
+    display: inline-block;
+    margin: $tags-text-margin;
+    font-size: $tags-text-font;
+  }
+  .tags-post {
+    padding: $tags-post-padding;
+    border-left: 1px solid $gray;
+    &:hover {
+      border-left: 3px solid $theme-color-hover;
+      transform: translateX(3px);
+      transition: 0.3s ease-out;
+      .tags-post-title {
+        color: $theme-color-hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+// -----------------------
+// define global variables
+// -----------------------
+
+// ======== default color ========
+// ==== theme color ====
+$theme-color-base: #0e83cd !default;
+$theme-color-hover: #1094e8 !default;
+
+// ==== other color variavles ====
+$theme-color: #c92027 !default;
+$white: #ffffff !default;
+$black: #444 !default;
+$dark-gray: #999  !default;
+$gray: #e3e3e3 !default;
+$light-gray: #e6e6e6 !default;
+
+// ======== set global default value ========
+// ==== font ====
+$global-font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !default;
+
+$global-Lato-font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif !default;
+
+$global-font-size: 15px !default;
+
+$global-font-weight: 400 !default;
+
+$global-headings: (
+        h1: 26px,
+        h2: 24px,
+        h3: 20px,
+        h4: 16px,
+        h5: 14px,
+        h6: 12px
+) !default;
+
+// ==== background ====
+$global-background: $white !default;
+
+// ==== line height ====
+$global-lineheight: 1.6 !default;
+
+// ======== Container ========
+// ==== width, height, distance ====
+$global-body-width: 1024px !default;
+
+$container-width: 1024px !default;
+
+$container-main-width: 784px !default;
+
+$container-aside-width: 240px !default;
+
+$container-offset: 120px !default;
+
+$container-main-padding: 15px !default;
+
+
+// ======== margin and padding ========
+$margin-large: 20px !default;
+$margin-middle: 12px !default;
+$margin-small: 8px !default;
+
+$padding-large: 20px !default;
+$padding-middle: 12px !default;
+$padding-small: 8px !default;
+
+// ======== set right nav/userInfo default value ========
+$side-top: 50px !default;
+
+$side-userinfo-width: 120px !default;
+
+$side-logo-width: 100px !default;
+
+$side-nav-top: 20px !default;
+
+$side-nav-item-margin: 16px !default;
+
+$side-nav-icon-padding: 5px !default;
+
+$side-nav-font: 15px !default;
+
+// ======== Header ========
+$header-background: #171f26 !default;
+
+$header-padding: 10px 0 !default;
+
+$header-shadow: 0 1px 3px rgba(26,26,26,.1) !default;
+
+
+// ======== Post ========
+$post-border: 1px solid $light-gray !default;
+
+$post-time-font: 14px !default;
+// ==== Toc ====
+$toc-content-top: 60px !default;
+
+$toc-content-padding: 0 10px !default;
+
+$toc-fixed-top: 20px !default;
+
+$toc-font-size: 15px !default;
+
+$toc-border-top: 1px solid $gray !default;
+
+$top-text-padding: 7px 0 !default;
+
+$toc-ol-left: 15px !default;
+
+$toc-back-to-top: 30px !default;
+
+
+// ======== Code ========
+$code-font-family: Consolas, Monaco, Menlo, Consolas, monospace !default;
+
+$code-font-size: 14px !default;
+
+$code-background: #eee !default;
+
+$code-highlight-color: (
+        name: #cdb314,
+        string: #62a05d,
+        comment: #999,
+        keyword: #e28b12,
+        variable: #53a4d9,
+        symbol: #cb4b16,
+        built_in: #c92027
+) !default;
+
+$code-type-list: (
+        html: "HTML",
+        css: "CSS",
+        javascript: "JavaScript",
+        typescripe: "TypeScript",
+        scss: "Scss",
+        less: "Less",
+        stylus: "Stylus",
+        java: "Java",
+        python: "Python",
+        php: "PHP",
+        ruby: "Ruby",
+        c: "C",
+        cpp: "C++",
+        swift: "Swift",
+        objectivec: "Objective-C",
+        go: "Go",
+        json: "JSON",
+        xml: "XML",
+        yml: "YAML"
+) !default;
+
+// ======== Archive ========
+// ==== timeline ====
+$archive-timeline-font-size: 28px !default;
+
+$archive-timeline-margin: 15px 0 !default;
+
+// ==== post ====
+$archive-post-padding: 4px 20px !default;
+
+$archive-post-time-margin: 10px !default;
+
+
+// ======== Tags ========
+$tags-list-item-margin: 15px !default;
+
+$tags-archives-top: 15px !default;
+
+$tags-text-font: 20px !default;
+
+$tags-text-margin: 20px 0 5px 0 !default;
+
+$tags-post-padding: 4px 20px !default;
+
+// ======== Copyright ========
+$copyright-padding: 10px !default;
+
+$copyright-item-margin: 5px 0 !default;
+
+$copyright-font: 16px !default;
+
+
+// ======== Footer Social ========
+$footer-social-font: 14px !default;
+
+$footer-social-icon-margin: 10px !default;
+
+$footer-social-font-size: 30px !default;
+
+$footer-social-time-line: 5px 0 !default;
+
+$footer-social-bottom: 15px !default;

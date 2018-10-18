@@ -1,0 +1,21 @@
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
+
+        </div>
+        <nav class="header-nav">
+            <a href="<%= url_for(config.home_dir || '/')%>" class="header-nav-link" >
+                <%- __('Menu.Home') %>
+            </a>
+            <a href="<%= url_for(config.archive_dir)%>" class="header-nav-link">
+                <%- __('Menu.Archives')%>
+            </a>
+            <a href="<%= url_for(config.tag_dir)%>" class="header-nav-link">
+                <%- __('Menu.Tags')%>
+            </a>
+            <a href="<%= config.root %><%- 'about/' %>" class="header-nav-link">
+                <%- __('Menu.About')%>
+            </a>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<%- partial('_partial/head') %>
+<body>
+<%- partial('_partial/header') %>
+<%- partial('_partial/mobile-header')%>
+<div class="container">
+    <main class="main">
+        <%- body %>
+    </main>
+
+    <% if (is_post()) { %>
+    <aside class="post-toc-aside">
+        <%- partial('_partial/toc') %>
+    </aside>
+    <% } %>
+</div>
+<%- partial('_partial/social') %>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<%- js('js/index.js') %>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '<%- page.title %>',
+        owner: '<%- config.comment.owner %>',
+        repo: '<%- config.comment.repo %>',
+        oauth: {
+            client_id: '<%- config.comment.id %>',
+            client_secret: '<%- config.comment.secret %>'
+        }
+    });
+    gitment.render('comment-container');
+</script>
+</html>

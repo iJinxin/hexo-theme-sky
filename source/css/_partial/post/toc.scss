@@ -1,0 +1,46 @@
+.post-toc-content {
+  height: 100%;
+  position: relative;
+  margin-top: $toc-content-top;
+  padding: $toc-content-padding;
+}
+.post-toc {
+  font-family: $global-Lato-font-family;
+  font-size: $toc-font-size;
+  color: $black;
+  position: absolute;
+  top: $toc-fixed-top;
+  .post-toc-title {
+    display: inline-block;
+    border-top: $toc-border-top;
+    padding: $top-text-padding;
+    color: $theme-color-base;
+  }
+  .toc-link {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: inherit;
+    padding: $top-text-padding;
+    display: block;
+    line-height: 1;
+    &:hover{
+      color: $theme-color-hover;
+    }
+  }
+  .toc-link.active {
+    color: $theme-color-base;
+  }
+  ol {
+    list-style: none;
+    padding-left: $toc-ol-left;
+  }
+  > ol {
+    margin: 0;
+    padding: 0;
+  }
+  .back-to-top {
+    margin-top: $toc-back-to-top;
+  }
+}

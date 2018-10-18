@@ -1,0 +1,41 @@
+<section class="archive">
+    <% if (page.archive) {%>
+    <div class="archive-title">
+
+    </div>
+    <% } else if (page.tag) {%>
+    <div class="archive-title tag">
+        <h2 class="archive-name"><%- page.tag %></h2>
+    </div>
+    <% } else if (page.category) { %>
+    <div class="archive-title category">
+        <h2 class="archive-name"><%- page.category %></h2>
+    </div>
+    <% } %>
+
+    <% year = 0 %>
+    <% site.posts.map(function (post) { %>
+        <% if (page.archive) { %>
+            <% post.year = date(post.date, 'YYYY') %>
+            <% if (year != post.year) { %>
+                <% year = post.year %>
+                <div class="archive-timeline">
+                    <h2 class="archive-year"><%- year %></h2>
+                </div>
+            <% } %>
+        <% } %>
+
+        <div class="archive-post">
+            <span class="archive-post-time">
+                <% if (page.archive) { %>
+                    <%- date(post.date, 'MM-DD')%>
+                <% } else { %>
+                    <%- date(post.date, 'YYYY-MM-DD')%>
+                <% } %>
+            </span>
+            <span class="archive-post-title">
+                <a class="archive-post-link" href="<%= url_for(post.path) %>"><%- post.title %></a>
+            </span>
+        </div>
+    <% })%>
+</section>

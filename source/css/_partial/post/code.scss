@@ -1,0 +1,106 @@
+code, pre {
+  font-size: $code-font-size;
+  font-family: $code-font-family;
+}
+
+code {
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: $theme-color-base;
+}
+.highlight {
+  margin: 1em 0;
+  background: $code-background;
+  border-radius: 4px;
+  overflow-x: auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+  position: relative;
+
+  table, tr, td {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 2px 7px;
+      font-size: $code-font-size;
+      content: 'Code';
+      background: darken($code-background, 2%);
+    }
+  }
+
+  @each $sign, $text in $code-type-list {
+    &.#{$sign} > table::after {
+      content: $text;
+    }
+  }
+
+  .gutter {
+    width: 10px;
+    color: $dark-gray;
+
+    pre {
+      margin: 0;
+      padding: 30px 7px 10px;
+    }
+  }
+
+  .code {
+    pre {
+      margin: 0;
+      padding: 30px 10px 10px;
+    }
+  }
+
+  .code {
+    // html tags, function name, css selector
+    .name,
+    .title,
+    .section,
+    .selector-id,
+    .selector-class {
+      color: map-get($code-highlight-color, name);
+    }
+
+    // html attr's value, string, number
+    .string,
+    .number,
+    .literal{
+      color: map-get($code-highlight-color, string);
+    }
+
+    // js keyword
+    .keyword,
+    .selector-tag,
+    .addition {
+      color: map-get($code-highlight-color, keyword);
+    }
+
+    // scss variable
+    .variable {
+      color: map-get($code-highlight-color, variable);
+    }
+
+    // js annotation
+    .comment,
+    .quote {
+      color: map-get($code-highlight-color, comment);
+    }
+
+    // javascript standard library, deletion
+    .built_in,
+    .deletion,
+    .meta {
+      color: map-get($code-highlight-color, built_in);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 0;
+  line-height: $global-lineheight;
+  font-family: $global-font-family;
+  color: $black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $theme-color-hover;
+  }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  font-family: $global-font-family;
+  line-height: $global-lineheight;
+}
+
+
+// container style
+.container {
+  width: $container-width;
+  margin: auto;
+  padding-left: $container-offset;
+  display: flex;
+  justify-content: space-between;
+  .main {
+    width: $container-main-width;
+    padding: $container-main-padding;
+  }
+  .post-toc-aside {
+    width: $container-aside-width;
+    position: relative;
+  }
+}
+@include max-screen() {
+  .container {
+    width: 100%;
+    transform: none;
+    margin-top: 50px;
+    .main {
+      width: 100%;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+    .post-toc-aside {
+      display: none;
+    }
+  }
+}
+
+// reset h1-h6
+@each $header, $size in $global-headings {
+  #{$header} {
+    font-size: $size;
+  }
+}

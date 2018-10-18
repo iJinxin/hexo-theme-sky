@@ -1,0 +1,29 @@
+.header {
+  position: relative;
+  background: $header-background;
+  padding: $header-padding;
+  box-shadow: $header-shadow;
+  font-family: $global-Lato-font-family;
+  .header-inner {
+    width: $container-main-width;
+    margin: 0 auto;
+    .header-nav-link {
+      display: inline-block;
+      line-height: 50px;
+      padding: 0 15px;
+      font-size: 15px;
+      color: $white;
+      opacity: 0.7;
+      transition: .2s;
+      &:hover {
+        color: $theme-color-hover;
+        opacity: 1;
+      }
+    }
+  }
+}
+@include max-screen() {
+  .header {
+    display: none;
+  }
+}

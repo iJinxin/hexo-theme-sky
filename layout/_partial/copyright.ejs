@@ -1,0 +1,14 @@
+<div class="post-copyright">
+    <p class="post-copyright-item">
+        <span class="author"><%- __('copyright.author') %>:</span>
+        <a href="<%- url_for()%>"><%- theme.copyright.author %></a>
+    </p>
+    <p class="post-copyright-item">
+        <span class="link"><%- __('copyright.link') %>:</span>
+        <a href="<%- url_for(page.permalink) %>"><%- page.permalink %></a>
+    </p>
+    <p class="post-copyright-item">
+        <span class="license"><%- __('copyright.license') %>:</span>
+        <%- theme.copyright.license %>
+    </p>
+</div>
