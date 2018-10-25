@@ -14,7 +14,7 @@
     <% } %>
 
     <% year = 0 %>
-    <% site.posts.map(function (post) { %>
+    <% site.posts.forEach(function(post){ %>
         <% if (page.archive) { %>
             <% post.year = date(post.date, 'YYYY') %>
             <% if (year != post.year) { %>
@@ -23,19 +23,51 @@
                     <h2 class="archive-year"><%- year %></h2>
                 </div>
             <% } %>
+            <div class="archive-post">
+                <span class="archive-post-time">
+                    <%- date(post.date, 'MM-DD')%>
+                </span>
+                <span class="archive-post-title">
+                    <a class="archive-post-link" href="<%= url_for(post.path) %>"><%= post.title %></a>
+                </span>
+            </div>
+        <% } else if (page.tag) {%>
+            <% hasThisTag = false %>
+            <% post.tags.forEach(function (tag) { %>
+                <% if (tag.name == page.tag) {%>
+                    <%hasThisTag = true%>
+                <% } %>
+            <% }) %>
+
+            <% if (hasThisTag) {%>
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    <%- date(post.date, 'YYYY-MM-DD')%>
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="<%= url_for(post.path) %>"><%= post.title %></a>
+                    </span>
+                </div>
+            <% } %>
+        <% } else if (page.category) {%>
+            <% hasThisCategory = false %>
+            <% post.categories.forEach(function (category) { %>
+                <% if (category.name == page.category) {%>
+                    <% hasThisCategory = true%>
+                <% } %>
+            <% }) %>
+
+            <% if (hasThisCategory) {%>
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    <%- date(post.date, 'YYYY-MM-DD')%>
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="<%= url_for(post.path) %>"><%= post.title %></a>
+                    </span>
+                </div>
+            <% } %>
         <% } %>
 
-        <div class="archive-post">
-            <span class="archive-post-time">
-                <% if (page.archive) { %>
-                    <%- date(post.date, 'MM-DD')%>
-                <% } else { %>
-                    <%- date(post.date, 'YYYY-MM-DD')%>
-                <% } %>
-            </span>
-            <span class="archive-post-title">
-                <a class="archive-post-link" href="<%= url_for(post.path) %>"><%- post.title %></a>
-            </span>
-        </div>
     <% })%>
 </section>

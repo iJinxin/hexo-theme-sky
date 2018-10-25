@@ -40,19 +40,11 @@ $global-background: $white !default;
 // ==== line height ====
 $global-lineheight: 1.6 !default;
 
-// ======== Container ========
+// ======== Main ========
 // ==== width, height, distance ====
-$global-body-width: 1024px !default;
+$main-content-width: 780px !default;
 
-$container-width: 1024px !default;
-
-$container-main-width: 784px !default;
-
-$container-aside-width: 240px !default;
-
-$container-offset: 120px !default;
-
-$container-main-padding: 15px !default;
+$main-content-padding: 15px !default;
 
 
 // ======== margin and padding ========
@@ -86,17 +78,25 @@ $header-padding: 10px 0 !default;
 
 $header-shadow: 0 1px 3px rgba(26,26,26,.1) !default;
 
+$mobile-header-font: '-apple-system,  "PingFang SC","Helvetica Neue",  "Microsoft YaHei"';
+
 
 // ======== Post ========
 $post-border: 1px solid $light-gray !default;
 
+$post-abstract-top: 25px !default;
+
+$post-abstract-bottom: 20px !default;
+
 $post-time-font: 14px !default;
 // ==== Toc ====
-$toc-content-top: 60px !default;
+$toc-width: 240px !default;
 
-$toc-content-padding: 0 10px !default;
+$toc-padding: 0 10px !default;
 
-$toc-fixed-top: 20px !default;
+$toc-max-screen-width: $main-content-width + $toc-width*2 + 50px !default;
+
+$toc-offset-left: $main-content-width - 10px !default;
 
 $toc-font-size: 15px !default;
 
@@ -110,11 +110,15 @@ $toc-back-to-top: 30px !default;
 
 
 // ======== Code ========
-$code-font-family: Consolas, Monaco, Menlo, Consolas, monospace !default;
+$code-font-family: "Source Code Pro",Monaco,Menlo,Consolas,monospace !default;
 
 $code-font-size: 14px !default;
 
 $code-background: #eee !default;
+
+$code-color: #4d4d4c !default;
+
+$code-blockquote-border-left: 5px solid #0af !default;
 
 $code-highlight-color: (
         name: #cdb314,
@@ -131,6 +135,7 @@ $code-type-list: (
         css: "CSS",
         javascript: "JavaScript",
         typescripe: "TypeScript",
+        node: "NodeJs",
         scss: "Scss",
         less: "Less",
         stylus: "Stylus",

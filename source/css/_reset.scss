@@ -14,7 +14,7 @@ a {
   }
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
   display: inline-block;
@@ -22,37 +22,29 @@ img{
   line-height: $global-lineheight;
 }
 
+// main style
+.main {
+  position: relative;
+  width: $main-content-width;
+  margin: 0 auto;
+  padding: $main-content-padding;
+  box-sizing: border-box;
+}
 
-// container style
-.container {
-  width: $container-width;
-  margin: auto;
-  padding-left: $container-offset;
-  display: flex;
-  justify-content: space-between;
-  .main {
-    width: $container-main-width;
-    padding: $container-main-padding;
-  }
+@include max-screen($toc-max-screen-width) {
   .post-toc-aside {
-    width: $container-aside-width;
-    position: relative;
+    display: none;
   }
 }
+
 @include max-screen() {
-  .container {
+  .main {
     width: 100%;
-    transform: none;
     margin-top: 50px;
-    .main {
-      width: 100%;
-      padding: 0 15px;
-      box-sizing: border-box;
-    }
-    .post-toc-aside {
-      display: none;
-    }
+    padding: 0 15px;
+    box-sizing: border-box;
   }
+
 }
 
 // reset h1-h6

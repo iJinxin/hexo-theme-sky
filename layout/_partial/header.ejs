@@ -4,18 +4,29 @@
 
         </div>
         <nav class="header-nav">
+            <% if (theme.menu.Home) { %>
             <a href="<%= url_for(config.home_dir || '/')%>" class="header-nav-link" >
                 <%- __('Menu.Home') %>
             </a>
+            <% } %>
+
+            <% if (theme.menu.Archives) { %>
             <a href="<%= url_for(config.archive_dir)%>" class="header-nav-link">
                 <%- __('Menu.Archives')%>
             </a>
+            <% } %>
+
+            <% if (theme.menu.Tags) { %>
             <a href="<%= url_for(config.tag_dir)%>" class="header-nav-link">
                 <%- __('Menu.Tags')%>
             </a>
+            <% } %>
+
+            <% if (theme.menu.About) { %>
             <a href="<%= config.root %><%- 'about/' %>" class="header-nav-link">
                 <%- __('Menu.About')%>
             </a>
+            <% } %>
         </nav>
     </div>
 </header>

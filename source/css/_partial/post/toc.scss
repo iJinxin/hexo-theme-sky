@@ -1,15 +1,12 @@
-.post-toc-content {
-  height: 100%;
-  position: relative;
-  margin-top: $toc-content-top;
-  padding: $toc-content-padding;
-}
 .post-toc {
+  width: $toc-width;
+  padding: $toc-padding;
   font-family: $global-Lato-font-family;
   font-size: $toc-font-size;
   color: $black;
+  box-sizing: border-box;
   position: absolute;
-  top: $toc-fixed-top;
+  margin-left: $toc-offset-left;
   .post-toc-title {
     display: inline-block;
     border-top: $toc-border-top;
@@ -42,5 +39,11 @@
   }
   .back-to-top {
     margin-top: $toc-back-to-top;
+  }
+}
+
+@include max-screen($toc-max-screen-width) {
+  .post-toc {
+    display: none;
   }
 }

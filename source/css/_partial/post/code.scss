@@ -4,10 +4,20 @@ code, pre {
 }
 
 code {
-  padding: 3px 5px;
-  border-radius: 4px;
-  color: $theme-color-base;
+  background: $code-background;
+  color: $code-color;
+  padding: 0 5px;
 }
+blockquote {
+  margin: 1em 0;
+  padding: 10px 20px;
+  border: 1px solid #e3e3e3;
+  border-left: $code-blockquote-border-left;
+  p {
+    margin: 0;
+  }
+}
+
 .highlight {
   margin: 1em 0;
   background: $code-background;
@@ -38,9 +48,35 @@ code {
     }
   }
 
+  figcaption {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    background: darken($code-background, 2%);
+    padding: 2px 7px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    & > a {
+      position: absolute;
+      right: 0;
+      margin-right: 8px;
+    }
+  }
+
   @each $sign, $text in $code-type-list {
     &.#{$sign} > table::after {
       content: $text;
+    }
+
+    &.#{$sign} > figcaption > span::after {
+      content: ' · ' + $text;
+    }
+
+    &.#{$sign} figcaption + table {
+      &::after {
+        display: none;
+      }
     }
   }
 
@@ -101,6 +137,29 @@ code {
     .deletion,
     .meta {
       color: map-get($code-highlight-color, built_in);
+    }
+  }
+}
+
+// table
+table {
+  max-width: 100%;
+  border: 1px solid #e3e3e3;
+  margin: 1em 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+  tr {
+    td, th {
+      padding: 5px 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+  }
+  tbody {
+    tr:nth-child(even) {
+      background: #eee;
+
     }
   }
 }

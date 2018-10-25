@@ -1,0 +1,17 @@
+// when i use hexo-theme-unit-test to test this theme, some problems come out, not humanized
+// since i don`t know what a third-part link will be written in your md file
+// if something bad happened, just fixed it here or contact me
+// good luck
+
+// ==== hexo youtube ====
+.video-container {
+  position: relative;
+  padding-bottom: 56.2%; /* 16:9 */
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

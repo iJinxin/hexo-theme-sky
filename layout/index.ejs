@@ -15,9 +15,18 @@
                 <% } %>
             </div>
             <div class="post-content">
-                <%- post.excerpt %>
+                <% if (post.excerpt ) {%>
+                    <%- post.excerpt %>
+                    <div class="read-more">
+                        <a href="<%- url_for(post.path)%>" class="read-more-link">
+                            <%- __('Post.readMore')%>
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                <% } else { %>
+                    <%- post.content %>
+                <% } %>
             </div>
-            <!--<span id="busuanzi_value_page_pv"></span>-->
         </article>
     <% }) %>
 </div>

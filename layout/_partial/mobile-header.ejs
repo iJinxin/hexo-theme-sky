@@ -6,22 +6,26 @@
             <span></span>
         </div>
         <div class="mobile-nav-title">
-            <a href="<%= url_for(config.home_dir || '/')%>" class="mobile-nav-title-link">iJinxin</a>
+            <a href="<%= url_for(config.home_dir || '/')%>" class="mobile-nav-title-link"><%- config.author %>'s Blog</a>
         </div>
 
     </div>
     <nav class="mobile-menu">
         <ul class="mobile-menu-list">
             <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
                 <a href="<%= url_for(config.home_dir || '/')%>" class="mobile-nav-link"><%- __('Menu.Home') %></a>
             </li>
             <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
                 <a href="<%= url_for(config.archive_dir || '/')%>" class="mobile-nav-link"><%- __('Menu.Archives') %></a>
             </li>
             <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
                 <a href="<%= url_for(config.tag_dir || '/')%>" class="mobile-nav-link"><%- __('Menu.Tags') %></a>
             </li>
             <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
                 <a href="<%= config.root %><%- 'about/' %>" class="mobile-nav-link"><%- __('Menu.About') %></a>
             </li>
         </ul>

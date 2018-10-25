@@ -14,15 +14,16 @@
 
     // make toc stay in the visible area
     Sky.prototype.tocFixed = function () {
+        var HEADER_OFFSET = 20;
         var $toc = $('#post-toc');
         if ($toc.length) {
             var minScrollTop = $toc.offset().top;
             $(window).scroll(function () {
                 var scrollTop = $(window).scrollTop();
                 if (scrollTop < minScrollTop) {
-                    $toc.css({'position': 'absolute'});
+                    $toc.css({'position': 'absolute', 'top': minScrollTop - 70});
                 } else {
-                    $toc.css({'position': 'fixed'});
+                    $toc.css({'position': 'fixed', 'top': HEADER_OFFSET + 'px'});
                 }
             });
         }

@@ -4,16 +4,10 @@
 <body>
 <%- partial('_partial/header') %>
 <%- partial('_partial/mobile-header')%>
-<div class="container">
-    <main class="main">
+<div class="main">
+    <div class="content-inner">
         <%- body %>
-    </main>
-
-    <% if (is_post()) { %>
-    <aside class="post-toc-aside">
-        <%- partial('_partial/toc') %>
-    </aside>
-    <% } %>
+    </div>
 </div>
 <%- partial('_partial/social') %>
 </body>
@@ -22,6 +16,7 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
+    <% if(config.comment) {%>
     var gitment = new Gitment({
         id: '<%- page.title %>',
         owner: '<%- config.comment.owner %>',
@@ -32,5 +27,7 @@
         }
     });
     gitment.render('comment-container');
+    <% } %>
+
 </script>
 </html>

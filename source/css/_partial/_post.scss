@@ -1,6 +1,6 @@
 // post common style
 .post-abstract, .post-whole {
-  padding-top: $padding-large;
+  padding-top: $post-abstract-top;
   .post-title h2 {
     font-weight: $global-font-weight;
     margin: 0;
@@ -19,13 +19,27 @@
   }
   .post-content {
     font-size: $global-font-size;
+    a {
+      color: $theme-color-base;
+      word-break: break-all;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
 // ==== post abstract ====
 .post-abstract {
-  padding-bottom: $padding-small;
-  border-bottom: $post-border
+  padding-bottom: $post-abstract-bottom;
+  border-bottom: $post-border;
+  .read-more {
+
+  }
+  .read-more-link {
+    font-size: 1.1em;
+    color: $theme-color-base;
+  }
 }
 
 // ==== post whole ====

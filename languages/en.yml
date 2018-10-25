@@ -1,0 +1,20 @@
+Menu:
+  Home: Home
+  Archives: Archives
+  Tags: Tags
+  About: About
+
+Paginator:
+  Prev: Prev
+  Next: Next
+  prev_post: Prev
+  next_post: Next
+
+Post:
+  visit: visited
+  readMore: ReadMore
+
+copyright:
+  author: Author
+  link: Link
+  license: License
