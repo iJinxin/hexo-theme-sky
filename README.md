@@ -1,6 +1,6 @@
-## hexo-theme-sky:一款简洁的hexo博客主题
-
 ## 功能简介
+[线上地址](https://ijinxin.github.io/)
+
 hexo-theme-sky 是一款简洁轻量的 hexo 博客主题，主要包含以下功能：
 - 语言切换，目前支持中文和英文
 - 文章访问统计
