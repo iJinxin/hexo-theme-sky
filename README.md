@@ -17,4 +17,5 @@ npm install hexo-renderer-scss --save
 
 ## 说明
 > 如果对您有帮助，可以点击右上角“Star”支持一下，谢谢！
+
 > 或者您有更好的想法，更棒的建议，也可以提issue，我会考虑实现
