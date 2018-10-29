@@ -8,12 +8,36 @@ hexo-theme-sky 是一款简洁轻量的 hexo 博客主题，主要包含以下�
 - 评论功能，目前使用的是gitment
 - 代码高亮
 
-## 安装
+## 使用指南
+安装 ``` hexo ```
 ```
-git clone https://github.com/iJinxin/hexo-theme-sky themes/even
+npm install hexo-cli -g
+hexo init blog
+```
+下载 ``` hexo-theme-sky ```主题
+```
+// 进入主题目录
+cd blog/themes
+git clone https://github.com/iJinxin/hexo-theme-sky sky
+```
+修改博客跟目录下的配置文件 ```_config.yml``` ,启用 ``` sky ``` 主题
+```
+// blog 目录下
+theme: sky
+```
+安装依赖项
+```
+// 回到blog目录
+cd ..
+cd ..
+npm install
 npm install hexo-renderer-scss --save
 ```
-修改配置文件中``` theme ```为 ```sky```
+运行
+```
+hexo server
+```
+启动服务后，访问 http://localhost:4000 预览主题
 
 ## 说明
 <blockquote>
