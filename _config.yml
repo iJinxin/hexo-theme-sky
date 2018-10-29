@@ -1,9 +1,6 @@
-# the beginning time of writing blogs
-since: 2017
-
 # menu
 menu:
   Home: /
   Archives: /archives
-#  Tags: /tags
-#  About: /about
+  Tags: /tags
+  About: /about

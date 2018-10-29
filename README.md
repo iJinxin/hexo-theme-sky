@@ -20,9 +20,8 @@ hexo init blog
 cd blog/themes
 git clone https://github.com/iJinxin/hexo-theme-sky sky
 ```
-修改博客跟目录下的配置文件 ```_config.yml``` ,启用 ``` sky ``` 主题
+修改博客根目录下的配置文件 ```_config.yml``` , 启用 ``` sky ``` 主题
 ```
-// blog 目录下
 theme: sky
 ```
 安装依赖项
