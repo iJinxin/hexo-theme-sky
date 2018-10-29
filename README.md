@@ -38,6 +38,8 @@ hexo server
 ```
 启动服务后，访问 http://localhost:4000 预览主题
 
+更多主题配置 [document]()
+
 ## 说明
 <blockquote>
 如果对您有帮助，可以点击右上角“Star”支持一下，谢谢！
