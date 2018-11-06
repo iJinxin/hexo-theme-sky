@@ -15,9 +15,8 @@ hexo init blog
 ```
 下载 ``` hexo-theme-sky ```主题
 ```
-// 进入主题目录
-cd blog/themes
-git clone https://github.com/iJinxin/hexo-theme-sky sky
+cd blog
+git clone https://github.com/iJinxin/hexo-theme-sky themes/sky
 ```
 修改博客根目录下的配置文件 ```_config.yml``` , 启用 ``` sky ``` 主题
 ```
@@ -25,9 +24,6 @@ theme: sky
 ```
 安装依赖项
 ```
-// 回到blog目录
-cd ..
-cd ..
 npm install
 npm install hexo-renderer-scss --save
 ```
