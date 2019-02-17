@@ -33,7 +33,7 @@ hexo server
 ```
 启动服务后，访问 http://localhost:4000 预览主题
 
-更多主题配置 [document](https://ijinxin.github.io/2018/10/29/hexo-theme-sky%E6%8C%87%E5%8D%97/)
+更多主题配置 [document](https://ijinxin.github.io/blog/2018/10/29/hexo-theme-sky%E6%8C%87%E5%8D%97/)
 
 ## 说明
 <blockquote>
