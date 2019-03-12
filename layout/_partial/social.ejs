@@ -26,7 +26,11 @@
             <% } %>
             <%- current %>
             &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
-            <a target="_blank" href="https://github.com/iJinxin"><%- config.author %></a>
+            <% if (theme.menu.About) { %>
+                <a href="<%= config.root %><%- 'about/' %>"><%- config.author %></a>
+            <% } else { %>
+                <%- config.author %>
+            <% } %>
         </p>
         <p class="theme-info">
             Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
